@@ -14,24 +14,15 @@ return {
     "markdown",
     "markdown_inline",
     "bash",
-    -- "sql",
 
     "lua",
     "luadoc",
 
-    -- "elixir",
-    -- "heex",
-    -- "gleam",
-
     "go",
-    -- "rust",
-    -- "zig",
 
-    -- "typescript",
-    -- "javascript",
-    -- "jsdoc",
-
-    -- "python",
+    "typescript",
+    "javascript",
+    "jsdoc",
   },
 
   highlight = {

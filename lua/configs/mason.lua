@@ -17,21 +17,16 @@ local mason_lsp = {
   ensure_installed = {
     "lua_ls",
     "gopls",
-    -- "elixirls",
-    -- "ts_ls",
-    -- "eslint",
-    -- "clangd",
-    -- "pyright",
-    -- "htmx-lsp",
-    -- "html-lsp",
+    "ts_ls",
+    "eslint",
+    "html-lsp",
   },
 }
 
 local mason_tools = {
   ensure_installed = {
     "stylua",
-    -- "eslint_d",
-    -- "clang-format",
+    "eslint_d",
 
     -- Go
     "delve",

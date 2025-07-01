@@ -22,23 +22,13 @@ return {
     },
   },
 
-  -- Elixir
-  -- elixirls = {
-  --   cmd = { vim.fn.expand("$HOME/") .. "/.local/share/nvim/mason/bin/elixir-ls" },
-  -- },
-
   -- Go
   gopls = {},
 
   -- JS/TS
-  -- ts_ls = {},
-  -- eslint = {},
-  -- htmx = {},
-  -- html = {},
+  ts_ls = {},
+  eslint = {},
 
-  -- C/C++
-  -- clangd = {},
-
-  -- Python
-  -- pyright = {},
+  -- WEB
+  html = {},
 }
