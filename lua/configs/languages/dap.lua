@@ -5,10 +5,11 @@ dapui.setup({
 	layouts = {
 		{
 			elements = {
-				{ id = "repl", size = 1 },
+				{ id = "repl", size = 0.25 },
+				{ id = "scopes", size = 0.75 },
 			},
-			position = "bottom",
-			size = 10,
+			position = "right",
+			size = 90,
 		},
 	},
 })

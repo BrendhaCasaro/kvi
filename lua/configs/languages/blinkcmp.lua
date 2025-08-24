@@ -1,5 +1,3 @@
----@module 'blink.cmp'
----@type blink.cmp.Config
 return {
   -- C-space: Open menu or open docs if already open
   -- C-n/C-p or Up/Down: Select next/previous item
@@ -32,14 +30,11 @@ return {
 
   cmdline = { enabled = false },
 
-  -- Default list of enabled providers defined so that you can extend it
-  -- elsewhere in your config, without redefining it, due to `opts_extend`
-  sources = {
-    default = { "lsp", "path", "snippets", "buffer", "lazydev" },
-    providers = {
-      lazydev = { module = "lazydev.integrations.blink", score_offset = 100 },
-    },
-  },
+	-- Default list of enabled providers defined so that you can extend it
+	-- elsewhere in your config, without redefining it, due to `opts_extend`
+	sources = {
+		default = { "lsp", "path", "snippets", "buffer" },
+	},
 
   fuzzy = { implementation = "lua" },
 
