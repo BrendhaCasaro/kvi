@@ -55,20 +55,4 @@ return {
     tools = { "delve", "goimports", "gofumpt" },
     fmt = { "goimports", "gofumpt" },
   },
-
-  javascript = {
-    fmt = "prettier",
-    lsp = "ts_ls",
-  },
-
-  html = {
-    fmt = "prettier",
-    lsp = "html",
-    tools = "html-lsp",
-  },
-
-  css = {
-    fmt = "prettier",
-    lsp = "cssls",
-  },
 }

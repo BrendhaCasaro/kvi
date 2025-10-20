@@ -42,12 +42,12 @@ vim.opt.fillchars = { eob = " " }
 
 -- Cursor
 vim.opt.guicursor = {
-	"n-v-c:block", -- Normal, Visual, Command-line
-	"i-ci:ver25", -- Insert, Command-line Insert, Visual-exclusive
-	"r-cr:hor20", -- Replace, Command-line Replace
-	"o:hor50", -- Operator-pending
-	"a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor", -- All modes: blinking & highlight groups
-	"sm:block-blinkwait175-blinkoff150-blinkon175", -- Showmatch mode
+  "n-v-c:block",                                         -- Normal, Visual, Command-line
+  "i-ci:ver25",                                          -- Insert, Command-line Insert, Visual-exclusive
+  "r-cr:hor20",                                          -- Replace, Command-line Replace
+  "o:hor50",                                             -- Operator-pending
+  "a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor", -- All modes: blinking & highlight groups
+  "sm:block-blinkwait175-blinkoff150-blinkon175",        -- Showmatch mode
 }
 
 -- Folding settings
@@ -66,13 +66,13 @@ vim.opt.wildmode = "longest:full,full"
 -- Better diff options
 vim.opt.fillchars.diff = "/"
 vim.opt.diffopt = {
-	"internal",
-	"filler",
-	"closeoff",
-	"vertical",
-	"linematch:60",
-	"algorithm:histogram",
-	"indent-heuristic",
+  "internal",
+  "filler",
+  "closeoff",
+  "vertical",
+  "linematch:60",
+  "algorithm:histogram",
+  "indent-heuristic",
 }
 
 -- Performance improvements
@@ -89,15 +89,15 @@ vim.g.loaded_ruby_provider = 0
 vim.opt.clipboard:append("unnamedplus")
 
 local function is_wsl()
-	local wsl_env = vim.fn.getenv("WSLENV")
-	local uname = vim.fn.system("uname -r")
-	return wsl_env ~= vim.NIL or uname:match("WSL") ~= nil
+  local wsl_env = vim.fn.getenv("WSLENV")
+  local uname = vim.fn.system("uname -r")
+  return wsl_env ~= vim.NIL or uname:match("WSL") ~= nil
 end
 
 if is_wsl() then
 	vim.g.clipboard = {
 		name = "WslClipboard",
-		copy = { ["+"] = "clip.exe", ["*"] = "clip.exe" },
+		copy = { ["+"] = "/mnt/c/Windows/System32/clip.exe", ["*"] = "/mnt/c/Windows/System32/clip.exe" },
 		paste = {
 			["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
 			["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
