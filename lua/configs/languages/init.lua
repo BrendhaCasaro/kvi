@@ -55,4 +55,22 @@ return {
     tools = { "delve", "goimports", "gofumpt" },
     fmt = { "goimports", "gofumpt" },
   },
+
+  python = {
+    lsp = {
+      name = "pylsp",
+      opts = {
+        settings = {
+          pylsp = {
+            plugins = {
+              pycodestyle = {
+                ignore = { 'W391' },
+                maxLineLength = 500
+              },
+            },
+          },
+        },
+      },
+    },
+  },
 }
